@@ -2,8 +2,7 @@ import java.util.Scanner;
 
 public class client 
 {
-	static Scanner scanner = new 
-			Scanner(System.in);
+	static Scanner scanner = new Scanner(System.in);
 	
 	withdraw checkout = new withdraw();
 	
@@ -11,11 +10,11 @@ public class client
 	int ID = 0;
 	String address = "";
 	String email = "";
-	int initial = 0;	
-	int balance = 0;
+	public int initial = 0;	
+	public int balance = 0;
+	public  int finalbalance = 0;
 	
-	
-	void client() 
+	void info() 
 	{
 		
 
@@ -29,26 +28,41 @@ public class client
 		email = scanner.next() ;
 		System.out.println("Type your ammount of money: ");
 		initial = scanner.nextInt() ;
-		
+		if (initial > 0) 
+		{
+		finalbalance = initial;
+		}
+
+
 		System.out.println();
 	}
 	
 	void balance() 
 	{
-		
-
-		System.out.println("Your balance is: " + initial + " $");	
+		System.out.println("Your balance is: " + finalbalance + " $");	
 		System.out.println();
 	}
 		
-	void ammount() 
-	{
-		
 
+	void withdraw () 
+	{
 		System.out.println("Ammount of money to withdraw:");
 		balance = scanner.nextInt() ;	
-		checkout.Withdraw(balance, initial);
-		System.out.println();
+
+
+		if((initial - balance) < 0) 
+		{
+			System.out.println("You can't withdraw" + balance + "$");	
+			System.out.println("Insufficiente balance");
+		}
+		else 
+		{
+			System.out.println("Successful transaction, your balance now is: ");
+			finalbalance = initial-balance;
+			System.out.println(finalbalance);
+
+		}	
 	}
+
 
 }

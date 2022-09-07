@@ -119,9 +119,8 @@ public class Data {
 			
 			case 3:
 			System.out.println("Ingrese el ID para mostrar la nota");
-			Info2 = keyboard.next(); 
+			Info = keyboard.next(); 
 
-			
 
 			break;
 		}

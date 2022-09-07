@@ -4,7 +4,7 @@ public class Pichincha
 {
 
 	static Scanner scanner = new 
-			Scanner(System.in);
+Scanner(System.in);
 
 	public static void main(String[] args) 
     {
@@ -15,7 +15,7 @@ public class Pichincha
         do
         {
         	System.out.println("PICHINCHA BANK");
-            System.out.println("Press \"1\" to enter your username");
+            System.out.println("Press \"1\" to enter your information");
             System.out.println("Press \"2\" to check your balance");
             System.out.println("Press \"3\" to withdraw your money");
             
@@ -24,15 +24,15 @@ public class Pichincha
             {
             
                 case 1:
-                    client.client();
+                    client.info();
                     break;
                     
                 case 2:
-                    client.ammount();
+                    client.balance();
                     break;
                     
                 case 3:
-                    client.balance();
+                    client.withdraw();
             }
         } 
         
